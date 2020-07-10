@@ -23,7 +23,8 @@
  </a>
 </p>
 
-![ehtools](https://user-images.githubusercontent.com/54115104/79588104-1f080080-80dc-11ea-989b-b282cb78f237.png)
+![ehtools-red](https://user-images.githubusercontent.com/54115104/86511955-54340d00-be06-11ea-816b-e241d4e27b42.png)
+
 ***
 
 # About Ehtools Framework
@@ -49,11 +50,11 @@ a WPA handshake in a matter of seconds. Plus, it's easy to install, set up, and 
 
 ## Ehtools uninstallation
 
-> cd ehtools
+**1.** Start Ehtools Framework.
 
-> chmod +x uninstall.sh
+**2.** Open Ehtools Framework settings.
 
-> ./uninstall.sh
+**3.** Select `Uninstall Ehtools Framework`.
 
 ***
 
@@ -111,8 +112,8 @@ it is very complex and you can mess up something and disrupt the framework!
 # Ehtools Framework execution
 
 ```
-To execute Ehtools Framework you 
-should execute the following command.
+To run Ehtools Framework you should 
+execute the following command.
 ```
 
 > ehtools
@@ -309,7 +310,7 @@ users to configure ehtools application.
 ```
 More than 58 options installed by default 
 you can find in ehtools, this is tools such 
-as Metasploit, Wireshark and other tools!
+as MetaSploit, Pupy and other tools!
 ```
 
 * Password protection and config encryption.
@@ -331,7 +332,7 @@ from the menu. This means you can grab a network handshake or download a new
 hacking tool like Pupy by just selecting from one of the menu options!
 ```
 
-![ehtools](https://user-images.githubusercontent.com/54115104/79588109-1fa09700-80dc-11ea-959f-65f16d8495bd.png)
+![ehtools-yellow](https://user-images.githubusercontent.com/54115104/86511984-92c9c780-be06-11ea-9888-9179447529b8.png)
 
 ***
 
@@ -486,7 +487,7 @@ be restored and you will have to reinstall ehtools!
     
 # Ehtools Framework protection
 
-![login](https://user-images.githubusercontent.com/54115104/79588097-1dd6d380-80dc-11ea-9d27-657c3bc57051.png)
+![ehtools-login](https://user-images.githubusercontent.com/54115104/86511975-7f1e6100-be06-11ea-8476-a01324898eb2.png)
 
 * Do this using install.sh.
 
@@ -518,28 +519,4 @@ using Ctrl-C or other exit signals!
 Usage of the Ehtools Framework for attacking targets without prior mutual consent is illegal.
 It is the end user's responsibility to obey all applicable local, state, federal, and international laws.
 Developers assume no liability and are not responsible for any misuse or damage caused by this program.
-```
-
-***
-
-# Ehtools Framework license
-
-```
-    ---------------------------------------------------
-                     Ehtools Framework                                                              
-    ---------------------------------------------------
-        Copyright (C) <2018-2020>  <Entynetproject>            
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ```

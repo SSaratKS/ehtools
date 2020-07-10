@@ -1,23 +1,5 @@
 #!/bin/bash
 
-#            ---------------------------------------------------
-#                             Ehtools Framework          
-#            ---------------------------------------------------
-#                Copyright (C) <2018-2020>  <Entynetproject>   
-#
-#        This program is free software: you can redistribute it and/or modify
-#        it under the terms of the GNU General Public License as published by
-#        the Free Software Foundation, either version 3 of the License, or
-#        any later version.
-#
-#        This program is distributed in the hope that it will be useful,
-#        but WITHOUT ANY WARRANTY; without even the implied warranty of
-#        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-#        GNU General Public License for more details.
-#
-#        You should have received a copy of the GNU General Public License
-#        along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 CE="\033[0m"
 RS="\033[1;31m"
 YS="\033[1;33m"
@@ -28,7 +10,18 @@ printf '\033]2;install.sh\a'
 if [[ $EUID -ne 0 ]]
 then
    sleep 1
-   echo -e "["$RS"*"$CE"] "$RS"This script must be run as "$YS"root"$RS"!"$CE"" 1>&2
+   echo -e "["$RS"*"$CE"] "$RS"This script must be run as root!"$CE"" 1>&2
+   sleep 1
+   exit
+fi
+
+{
+ASESR="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
+} &> /dev/null
+if [[ "$ASESR" != 0 ]]
+then 
+   sleep 1
+   echo -e "["$RS"*"$CE"] "$RS"No Internet connection!"$CE""
    sleep 1
    exit
 fi
@@ -83,9 +76,9 @@ ESRES="$( cat /dev/config/configure.txt | head -n 1 )"
 if [[ "$SERSE" != "$ESRES" ]]
 then
 
-ASESR="$(timeout -s SIGTERM 40 curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//')"
+ASESR="$(ping -c 1 -q google.com >&/dev/null; echo $?)"
 
-if [[ "$ASESR" != "" ]]
+if [[ "$ASESR" = 0 ]]
 then 
 
 clear
@@ -107,7 +100,7 @@ fi
 
 else
 sleep 1
-echo -e "["$RS"*"$CE"] "$RS"Can't connect to server: There is no connection!"$CE""
+echo -e "["$RS"*"$CE"] "$RS"No Internet connection!"$CE""
 sleep 1
 exit
 fi

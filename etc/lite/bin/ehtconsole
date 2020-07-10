@@ -1,23 +1,5 @@
 #!/bin/bash
 
-#            ---------------------------------------------------
-#                             Ehtools Framework          
-#            ---------------------------------------------------
-#                Copyright (C) <2018-2020>  <Entynetproject>   
-#
-#        This program is free software: you can redistribute it and/or modify
-#        it under the terms of the GNU General Public License as published by
-#        the Free Software Foundation, either version 3 of the License, or
-#        any later version.
-#
-#        This program is distributed in the hope that it will be useful,
-#        but WITHOUT ANY WARRANTY; without even the implied warranty of
-#        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-#        GNU General Public License for more details.
-#
-#        You should have received a copy of the GNU General Public License
-#        along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 # set -x
 VERSION=3.0.0
 #Number of tools with keyboard shortcut support
@@ -111,7 +93,7 @@ toolarray=(
 "fluxion" "sniffer" "wifite" "wifiphisher" "morpheus" "osrframework" "zatacker" "trity" "cupp" "dracnmap" "fern" "kickthemout" "ghostphisher" "theeye" "xerxes"
 "mdk3" "katana" "airgeddon" "4nonimizer" "beelogger" "ezsploit" "pupy" "zirikatu" "wifiautopwner" "bully" "anonsurf" "anonym8" "thefatrat" "angryip" "sniper"
 "recondog" "redhawk" "winpayloads" "chaos" "routersploit" "infoga" "nwatch" "eternalscanner" "eaphammer" "dagon" "lalin" "knockmail" "kwetza" "ngrok" "netdiscover"
-"websploit" "openvas" "shellter" "geany" "bleachbit" "vmr" "hashbuster" "findsploit" "howdoi" "operative" "netattack2" "proton" "omega" "ghost"
+"websploit" "openvas" "shellter" "geany" "bleachbit" "vmr" "hashbuster" "findsploit" "howdoi" "operative" "netattack2" "storm" "utopia" "ghost"
 "dropit_frmw" "wifi_pumpkin" "veil" "leviathan" "fake_image" "avet" "gloom" "arcanus" "msfpc" "morphhta" "lfi" "unibyav" "demiguise" "dkmc" "sechub" "beef" "mitmf"
 "fsociety" "arp_scan" "netool" "sqlmap" "patator" "zeus" "evil_droid" "nosqlmap" "mouse" "zerodoor" "cromos" "yuki-chan" "socialfish" "entropy" "blazy"
 "striker" "hyprpulse" "instaburst" "instagram-py" "datasploit" "sitebroker" "enigma"
@@ -298,7 +280,7 @@ function check_wlans
 if [[ $EUID -ne 0 ]]
 then
    sleep 1
-   echo -e "["$RS"*"$CE"] "$RS"This script must be run as "$YS"root"$RS"!"$CE"" 1>&2
+   echo -e "["$RS"*"$CE"] "$RS"This script must be run as root!"$CE"" 1>&2
    sleep 1
    exit
 fi
@@ -326,7 +308,7 @@ function banner
 
       echo -e
       echo -e "$COL     ███████╗██╗  ██╗████████╗    $WHS Name |$RS Entynet Hacker Tools$CE" 
-      echo -e "$COL     ██╔════╝██║  ██║╚══██╔══╝    $WHS Ver  |$RS v3.0.0$WHS :$YS LITE$CE"                
+      echo -e "$COL     ██╔════╝██║  ██║╚══██╔══╝    $WHS Ver  |$RS v4.0.0$WHS :$YS LITE$CE"
       echo -e "$COL     █████╗  ███████║   ██║       $WHS Core |$RS TEF$WHS :$YS The Ehtools Framework$CE"         
       echo -e "$COL     ██╔══╝  ██╔══██║   ██║       $WHS Dev  |$RS Entynetproject$CE"                 
       echo -e "$COL     ███████╗██║  ██║   ██║       $WHS Site |$YS entynetproject.simplesite.com$CE"
@@ -754,8 +736,8 @@ done
 	#~ echo -e ""$YS"14"$CE") Ghost-Phisher"$YS"34"$CE") ReconDog      "$YS"54"$CE") Howdoi           "$YS"74"$CE") MITMf"
 	#~ echo -e ""$YS"15"$CE") The Eye      "$YS"35"$CE") RED HAWK      "$YS"55"$CE") Operative-frmwork"$YS"75"$CE") Netool-toolkit"
 	#~ echo -e ""$YS"16"$CE") Xerxes       "$YS"36"$CE") WinPayloads   "$YS"56"$CE") Netattack2       "$YS"76"$CE") Patator"
-	#~ echo -e ""$YS"17"$CE") Mdk3-master  "$YS"37"$CE") Shellter      "$YS"57"$CE") Proton           "$YS"77"$CE") Evil-Droid"
-	#~ echo -e ""$YS"18"$CE") Katana       "$YS"38"$CE") CHAOS         "$YS"58"$CE") Omega            "$YS"78"$CE") NoSQLMap"
+	#~ echo -e ""$YS"17"$CE") Mdk3-master  "$YS"37"$CE") Shellter      "$YS"57"$CE") Storm            "$YS"77"$CE") Evil-Droid"
+	#~ echo -e ""$YS"18"$CE") Katana       "$YS"38"$CE") CHAOS         "$YS"58"$CE") Utopia           "$YS"78"$CE") NoSQLMap"
 	#~ echo -e ""$YS"19"$CE") Airgeddon    "$YS"39"$CE") Routersploit  "$YS"59"$CE") Ghost"           "$YS"79"$CE") CLoad
 	#~ echo -e ""$YS"20"$CE") Websploit    "$YS"40"$CE") Geany         "$YS"60"$CE") Dr0p1t"
 	#~ echo -e ""$YS" b"$CE") Go back"
@@ -932,10 +914,10 @@ done
 		#~ install_netattack2
 	#~ elif [[ "$REIN" = "57" ]]
 	#~ then
-		#~ install_proton
+		#~ install_storm
 	#~ elif [[ "$REIN" = "58" ]]
 	#~ then
-		#~ install_omega
+		#~ install_utopia
 	#~ elif [[ "$REIN" = "59" ]]
 	#~ then
 		#~ install_ghost
@@ -3160,10 +3142,10 @@ function update_ehtools
 	echo -e "["$YS"*"$CE"] "$YS"Connecting to server..."$CE""
       sleep 2
       echo -e "["$YS"*"$CE"] "$YS"Checking for updates..."$CE""
-	TESTINTERNETCONNECTION=$(curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//')
-	if [[ "$TESTINTERNETCONNECTION" != "" ]]
+	TESTINTERNETCONNECTION=$( ping -c 1 -q google.com >&/dev/null; echo $? )
+	if [[ "$TESTINTERNETCONNECTION" = 0 ]]
 	then
-		VER=$(timeout -s SIGTERM 40 curl "https://raw.githubusercontent.com/entynetproject/ehtools/master/version.txt" 2>/dev/null)
+		VER=$( curl "https://raw.githubusercontent.com/entynetproject/ehtools/master/version.txt" 2>/dev/null )
 		if [[ "$VERSION" != "$VER" ]]
 		then
 			echo -e "There is an update available"
@@ -3259,7 +3241,7 @@ echo $passcode | ./libunconf
 			sleep 1
 			echo -e "Installed version: "$GNS"$VERSION"$CE""
 			sleep 1
-			echo -e "Github version: "$GNS"   $VER"$CE""
+			echo -e "Latest version: "$GNS"   $VER"$CE""
 			sleep 1
 			echo -e "$PAKTGB"
 			$READAK	
@@ -3267,10 +3249,9 @@ echo $passcode | ./libunconf
 		fi
 	else
 	        clear
-		echo -e "["$RS"*"$CE"] "$RS"There is no connection!"$CE""
+	  sleep 1
+		echo -e "["$RS"*"$CE"] "$RS"No Internet connection!"$CE""
 		sleep 1
-		echo -e "["$GNS"~"$CE"] "$GNS"Maybe you should type 'stop' in the main menu to get Internet access again"$CE""
-		echo -e ""
 		echo -e "$PAKTGB"
 		$READAK
 		exec bash "$0"
@@ -5769,12 +5750,13 @@ function settings_menu
 		echo -e ""$YS" 1"$CE") Change logo color"
 		echo -e ""$YS" 2"$CE") Howdoi settings"
 		echo -e ""$YS" 3"$CE") Ehtools Password Protection                  $EPPO"
-                echo -e ""$YS" 4"$CE") Ehtools Password Protection Crypto           $EPPC"
+    		echo -e ""$YS" 4"$CE") Ehtools Password Protection Crypto           $EPPC"
 		echo -e ""$YS" 5"$CE") Ignore negative one when deauthing           $IGN"
 		echo -e ""$YS" 6"$CE") MAC to change to, when starting monitor      $STARTMAC"	
 		echo -e ""$YS" 7"$CE") Interface for arp-scan (network scanner)     $ARPIN"
-		echo -e ""$YS" 8"$CE") ALFA AWUS036ACH support                      $ALFA"		
-                echo -e ""$YS" b"$CE") Go back"
+		echo -e ""$YS" 8"$CE") ALFA AWUS036ACH support                      $ALFA"
+		echo -e ""$YS" 9"$CE") Uninstall Ehtools Framework"
+    		echo -e ""$YS" b"$CE") Go back"
 		echo -e ""$YS" 0"$CE") Exit"
 		read -e -p $'(\033[4;93msettings\033[0m)> ' SET
 		clear
@@ -5782,6 +5764,11 @@ function settings_menu
 		then
 			BACKL=1
 			break
+	  	elif [[ "$SET" = 9 ]]
+	  	then
+	    		cd /root/ehtools
+	    		chmod +x uninstall.sh
+	    		./uninstall.sh
 		elif [[ "$SET" = 0 ]]
 		then
 			cd /root/ehtools/lib
@@ -7243,30 +7230,30 @@ clear
 		install_default
 clear
 	}
-	function install_proton
+	function install_storm
 	{
-		foldname="proton"
-		gitlink="https://github.com/entynetproject/proton.git"
+		foldname="storm"
+		gitlink="https://github.com/entynetproject/storm.git"
 		install_default
 clear
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
 		then
-			cd /root/proton
+			cd /root/storm
 			chmod +x install.sh
 			./install.sh
 		fi
 	}
-	function install_omega
+	function install_utopia
 	{
-		foldname="omega"
-		gitlink="https://github.com/entynetproject/omega.git"
+		foldname="utopia"
+		gitlink="https://github.com/entynetproject/utopia.git"
 		install_default
 clear
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
 		then
-			cd omega
+			cd utopia
 			chmod +x install.sh
 			./install.sh
 		fi
@@ -7754,7 +7741,7 @@ then
 if [[ $EUID -ne 0 ]]
 then
    sleep 1
-   echo -e "["$RS"*"$CE"] "$RS"This script must be run as "$YS"root"$RS"!"$CE"" 1>&2
+   echo -e "["$RS"*"$CE"] "$RS"This script must be run as root!"$CE"" 1>&2
    sleep 1
    exit
 fi
@@ -7767,7 +7754,7 @@ then
 if [[ $EUID -ne 0 ]]
 then
    sleep 1
-   echo -e "["$RS"*"$CE"] "$RS"This script must be run as "$YS"root"$RS"!"$CE"" 1>&2
+   echo -e "["$RS"*"$CE"] "$RS"This script must be run as root!"$CE"" 1>&2
    sleep 1
    exit
 fi
@@ -7821,7 +7808,7 @@ else
 if [[ $EUID -ne 0 ]]
 then
    sleep 1
-   echo -e "["$RS"*"$CE"] "$RS"This script must be run as "$YS"root"$RS"!"$CE"" 1>&2
+   echo -e "["$RS"*"$CE"] "$RS"This script must be run as root!"$CE"" 1>&2
    sleep 1
    exit
 fi
